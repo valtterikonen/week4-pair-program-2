@@ -1,12 +1,14 @@
+import styles from '../About.module.css';
+
 const About = () => {
   return (
     <div>
       {/* About section starts */}
-        <section className="section" id="about">
-          <div className="section-title">
+        <section className={styles.section} id="about">
+          <div className={styles['section-title']}>
             <h2>about <span>us</span></h2>
           </div>
-          <div className="section-center about-center">
+          <div className={styles['section-center about-center']}>
             <div className="about-img">
               <img
                 src="images/about.jpeg"
@@ -26,7 +28,7 @@ const About = () => {
                 Aspernatur quisquam harum nam cumque temporibus explicabo
                 dolorum sapiente odio unde dolor?
               </p>
-              <a href="#" className="btn">read more</a>
+              <a href="#" className={styles.btn}>read more</a>
             </article>
           </div>
         </section>
@@ -34,4 +36,5 @@ const About = () => {
     </div>
   );
 };
+
 export default About;
