@@ -4,10 +4,6 @@ const notFound = require('./middleware/notFoundMiddleware');
 
 const app = express();
 
-// Init middleware
-app.use(notFound);
-app.use(error);
-
 // Body Parser Middleware
 app.use(express.json());
 
@@ -15,6 +11,10 @@ app.use(express.json());
 app.use('/api/tours', require('./routers/toursRouter'));
 app.use('/api/services', require('./routers/servicesRouter'));
 app.use('/api/users', require('./routers/usersRouter'));
+
+// Init middleware
+app.use(notFound);
+app.use(error);
 
 const PORT = 4000;
 
