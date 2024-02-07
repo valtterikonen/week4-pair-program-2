@@ -1,8 +1,12 @@
-const express = require('express');
 const error = require('./middleware/errorMiddleware');
 const notFound = require('./middleware/notFoundMiddleware');
+const express = require('express');
+const mongoose = require('mongoose');
+const connectDB = require('./db.js'); // Adjust the path accordingly
 
+const port = process.env.PORT || 3000;
 const app = express();
+connectDB();
 
 // Body Parser Middleware
 app.use(express.json());
